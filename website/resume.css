@@ -1,0 +1,109 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #E3EAA9;
+    background-color: #332D56;
+    padding: 100px 70px;
+}
+
+.title{
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+.linkedin{
+    color: #4E6688;
+}
+
+h1,h3,h2,h4 {
+    text-align: center;
+    margin-block-end: 2.5rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    
+}
+
+.summary {
+    padding-top: 20px;
+    text-align: justify;
+
+    p {
+        font-size: 1.6rem;
+        letter-spacing: .2rem;
+    }
+}
+
+.skills-ticker {
+    font-size: 15px;
+    padding-block: 8px;
+    border-block: 1px solid;
+    overflow: hidden;
+    user-select: none;
+
+    --gap: 20px;
+    display: flex;
+    gap: var(--gap);
+}
+
+.skills-ticker i {
+    font-size: 24px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.skills-ticker ul {
+    list-style: none;
+    flex-shrink: 0;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+
+    animation: scroll 15s linear infinite;
+}
+
+.skills-ticker:hover ul {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
+.resume_counter {
+    position: fixed;
+    top: 15px;
+    background: #4E6688;
+    padding: 8px 16px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
