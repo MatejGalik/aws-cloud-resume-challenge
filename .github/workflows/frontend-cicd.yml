@@ -3,7 +3,9 @@ name: Uploading website to aws S3
 on:
   push:
     branches:
-      - main
+        -   main
+    paths: 
+        -   'frontend/**'
 
 jobs:
   deploy:
