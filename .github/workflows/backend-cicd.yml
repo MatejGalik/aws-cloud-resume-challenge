@@ -1,16 +1,15 @@
-name: Deploy backend on AWS S3
+name: Deploy backend on AWS Lambda
 
 on:
   push:
     branches:
       - main
-  
 
 jobs:
-  build-backend:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout code
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Configure AWS credentials
@@ -20,22 +19,18 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
-      - name: Install dependencies
-        run: cd website/backend && npm install --production
-
       - name: Package Lambda
-        run: cd backend && zip -r ../backend.zip .
+        run: |
+          cd website/backend
+          zip backend.zip handler.py
+          mv backend.zip ../../
 
       - name: Deploy to Lambda
-        run: aws lambda update-function-code \
-              --function-name cloudresume-test-api \
-              --zip-file fileb://backend.zip
+        run: |
+          aws lambda update-function-code \
+            --function-name cloudresume-test-api \
+            --zip-file fileb://backend.zip
 
-      - name: Verify Lambda
-        run: aws lambda invoke \
-              --function-name my-backend-function \
-              --payload '{}' \
-              response.json && cat response.json
-                        
-                                    
+      - name: Clean up
+        run: rm -f backend.zip        
 
