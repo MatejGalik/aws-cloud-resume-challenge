@@ -21,9 +21,8 @@ jobs:
 
       - name: Package Lambda
         run: |
-          cd website/backend
-          zip backend.zip handler.py
-          mv backend.zip ../../
+            cd website/backend
+            zip -r ../../backend.zip .
 
       - name: Deploy to Lambda
         run: |
