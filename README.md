@@ -4,17 +4,6 @@ This project is my submission for the **Cloud Resume Challenge**, where the goal
 
 ---
 
-## Table of Contents
-
-- [Project Overview](#project-overview)  
-- [Architecture](#architecture)  
-- [AWS Services Used](#aws-services-used)  
-- [Features](#features)  
-- [Setup & Deployment](#setup--deployment)  
-- [Usage](#usage)  
-- [License](#license)  
-
----
 
 ## Project Overview
 
@@ -36,9 +25,9 @@ The website is deployed using the following architecture:
 3. **Route 53** – Provides a custom domain name and DNS management.  
 4. **DynamoDB** – Stores visitor count data.  
 5. **Lambda Function** – Updates the visitor counter in DynamoDB on each page visit.  
-6. **IAM Roles & Policies** – Ensures secure access for AWS resources.  
+6. **IAM Roles & Policies** – Ensures secure access for AWS resources.
+7. **CI/CD pipelines** – Using GitHub Actions automatically deploys updates to the S3 bucket.
 
-*Optional:* A CI/CD pipeline (using GitHub Actions) automatically deploys updates to the S3 bucket.
 
 ---
 
@@ -63,4 +52,3 @@ The website is deployed using the following architecture:
 - **Automated deployment** via GitHub Actions (CI/CD pipeline)  
 - **Secure access** with HTTPS (ACM certificate)
 
----
