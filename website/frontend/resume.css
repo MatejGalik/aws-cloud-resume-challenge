@@ -94,6 +94,25 @@ h1,h3,h2,h4 {
     backdrop-filter: blur(10px);
 }
 
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 20px;
+}
+
+.social-icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain; 
+    transition: transform 0.3s;
+}
+
+
+
+.social-icon img:hover {
+    transform: scale(1.1);
+}
 
 
 

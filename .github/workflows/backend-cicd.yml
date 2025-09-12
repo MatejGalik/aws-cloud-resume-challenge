@@ -27,7 +27,7 @@ jobs:
       - name: Deploy to Lambda
         run: |
           aws lambda update-function-code \
-            --function-name cloudresume-test-api \
+            --function-name cloudresume-test-api-v2 \
             --zip-file fileb://backend.zip
 
       - name: Clean up
