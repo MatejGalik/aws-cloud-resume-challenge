@@ -5,33 +5,27 @@
     padding: 0;
 }
 
-img {
-    max-width: 100%;
-}
 
 body {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    color: #E3EAA9;
-    background-color: #332D56;
+    color: #EEEE;
+    background-color:#222831;
     padding: 100px 70px;
 }
 
 .title{
-    margin-top: 100px;
-    margin-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 15px;
 }
 
-.linkedin{
-    color: #4E6688;
-}
 
 h1,h3,h2,h4 {
     text-align: center;
     margin-block-end: 2.5rem;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
     
 }
 
@@ -40,8 +34,9 @@ h1,h3,h2,h4 {
     text-align: justify;
 
     p {
-        font-size: 1.6rem;
-        letter-spacing: .2rem;
+        font-size: 1.4rem;
+        letter-spacing: .1rem;
+        margin: 0;
     }
 }
 
@@ -88,22 +83,24 @@ h1,h3,h2,h4 {
 .resume_counter {
     position: fixed;
     top: 15px;
-    background: #4E6688;
+    background: #393E46;
     padding: 8px 16px;
     border-radius: 15px;
     backdrop-filter: blur(10px);
 }
 
 .social-icons {
+    position: fixed;
+    top: 15px;
+    right: 70px;
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    padding: 20px;
+    gap: 0.6rem;
 }
 
 .social-icon img {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     object-fit: contain; 
     transition: transform 0.3s;
 }
@@ -115,6 +112,175 @@ h1,h3,h2,h4 {
 }
 
 
+.profile-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.profile-pict {
+    width: 180px;
+    display: block;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+   
+}
+
+
+
+.experience-section {
+    width: 50%;
+    padding-right: 20px;
+    box-sizing: border-box;
+    border-right: 0.8px solid #ccc;
+    
+    
+}
+
+.job-block {
+    background-color: #393E46;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    border-left: 4px solid #00ADB5;
+    border-radius: 8px;
+}
+
+.job-title {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.job-period {
+    font-style: italic;
+    color: #EEEEEE;
+    margin-bottom: 10px;
+}
+
+.job-details {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+.skills-list {
+    list-style-type: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 15px;
+    
+}
+
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #393E46;
+    border-left: 4px solid #00ADB5;
+    color: #EEEEEE;
+    padding: 10px 15px;
+    border-radius: 5px;
+    height: 40px;
+    margin-left: 20px;
+    
+}
+
+
+.skill-name {
+    font-weight: bold;
+    min-width: 120px;
+    margin-right: 15px;
+}
+
+
+.skill-bar {
+    height: 12px;
+    flex-grow: 1;
+    background-color: #2D3238;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    border-radius: 6px;
+    background-color: #00ADB5;
+    width: 0;
+    transition: width 1.5s ease-in-out;
+}
+
+.section-title {
+    color: #EEEEEE;
+}
+
+
+
+  .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 50px;
+      visibility: hidden;
+  }
+
+  
+  .modal {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .overlay.show {
+      visibility: visible;
+  }
+
+  button {
+      margin-top: 15px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      background: #0077cc;
+      color: white;
+      cursor: pointer;
+  }
+
+  .section {
+    padding-left: 20px;
+  }
+
+  .accordion button {
+      width: 100%;
+      text-align: left;
+      padding: 10px;
+      font-weight: bold;
+      border: none;
+      background: #393E46;
+      cursor: pointer;
+  }
+
+  .accordion button:hover {
+      background: #515357;
+  }
+
+  .panel {
+      display: none;
+      padding: 10px;
+      background: #1d2229;
+  }
 
 
 

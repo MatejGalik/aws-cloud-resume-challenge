@@ -3,21 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Matej Galik CV</title>
     <link rel="stylesheet" href="resume.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     
 </head>
 <body>
+
+<div id="popup" class="overlay">
+    <div class="modal">
+        <h2>Attention</h2>
+        <p>This version of website is not complete yet, but stay tuned :)</p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+</div>
+
+<script>
+    
+    window.onload = function () {
+        document.getElementById("popup").classList.add("show");
+    }
+    function closePopup() {
+        document.getElementById("popup").classList.remove("show");
+    }
+</script>
+
+
+<div class="profile-center">
+    <img class="profile-pict" src="images/profile-pict.png" alt="me :D">
+</div>
+
+
 <h1 class="title">
     Matej Galik
 </h1>
 <h3>
-    Student
+    Cloud and DevOps enthusiast, student at STU FEI.
 </h3>
 
 <section class="contact-section text-center mt-8">
-    <h2 class="text-2xl font-semibold mb-4">Kontakt</h2>
     <div class="social-icons flex justify-center gap-6">
 
         <!-- GitHub SVG -->
@@ -37,13 +61,11 @@
         <li><i class="devicon-html5-plain colored"></i> <span class="skill">HTML</span></li>
         <li><i class="devicon-css3-plain colored"></i> <span class="skill">CSS</span></li>
         <li><i class="devicon-javascript-plain colored"></i> <span class="skill">JavaScript</span></li>
-        <li><i class="devicon-php-plain colored"></i> <span class="skill">PHP</span></li>
+        <li><i class="devicon-amazonwebservices-plain-wordmark"></i> <span class="skill">AWS</span></li>
         <li><i class="devicon-mysql-plain colored"></i> <span class="skill">MySQL</span></li>
-        <li><i class="devicon-react-original colored"></i> <span class="skill">React</span></li>
-        <li><i class="devicon-nodejs-plain colored"></i> <span class="skill">Node.js</span></li>
+        <li><i class="devicon-bash-plain"></i> <span class="skill">Bash</span></li>
         <li><i class="devicon-git-plain colored"></i> <span class="skill">Git</span></li>
-        <li><i class="devicon-bootstrap-plain colored"></i> <span class="skill">Bootstrap</span></li>
-        <li><i class="devicon-wordpress-plain colored"></i> <span class="skill">WordPress</span></li>
+        <li><i class="devicon-linux-plain"></i> <span class="skill">Linux</span></li>
     </ul>
 
     <!-- duplikácia pre animáciu -->
@@ -51,32 +73,206 @@
         <li><i class="devicon-html5-plain colored"></i> <span class="skill">HTML</span></li>
         <li><i class="devicon-css3-plain colored"></i> <span class="skill">CSS</span></li>
         <li><i class="devicon-javascript-plain colored"></i> <span class="skill">JavaScript</span></li>
-        <li><i class="devicon-php-plain colored"></i> <span class="skill">PHP</span></li>
+        <li><i class="devicon-amazonwebservices-plain-wordmark"></i> <span class="skill">AWS</span></li>
         <li><i class="devicon-mysql-plain colored"></i> <span class="skill">MySQL</span></li>
-        <li><i class="devicon-react-original colored"></i> <span class="skill">React</span></li>
-        <li><i class="devicon-nodejs-plain colored"></i> <span class="skill">Node.js</span></li>
+        <li><i class="devicon-bash-plain"></i> <span class="skill">Bash</span></li>
         <li><i class="devicon-git-plain colored"></i> <span class="skill">Git</span></li>
-        <li><i class="devicon-bootstrap-plain colored"></i> <span class="skill">Bootstrap</span></li>
-        <li><i class="devicon-wordpress-plain colored"></i> <span class="skill">WordPress</span></li>
+        <li><i class="devicon-linux-plain"></i> <span class="skill">Linux</span></li>
     </ul>
 </div>
 
-<div class="resume_counter">nacitavam...</div>
+<div class="resume_counter">Loading...</div>
 
 <div class="summary">
     <h2>
         About me
     </h2>
     <p class="text">
-        Lorem ipsum dolor sit amet consectetur adipiscing elit. Ex sapien vitae pellentesque sem placerat in id. Pretium tellus
-        duis convallis tempus leo eu aenean. Urna tempor pulvinar vivamus fringilla lacus nec metus. Iaculis massa nisl
-        malesuada lacinia integer nunc posuere. Semper vel class aptent taciti sociosqu ad litora. Conubia nostra inceptos
-        himenaeos orci varius natoque penatibus. Dis parturient montes nascetur ridiculus mus donec rhoncus. Nulla molestie
-        mattis scelerisque maximus eget fermentum odio. Purus est efficitur laoreet mauris pharetra vestibulum fusce.
+        I am a 2nd-year Bachelor’s student at STU FEI, studying Information and Communication Technologies. I have a strong
+        passion for cloud technologies and DevOps, and I enjoy experimenting with new tools, building small projects, and
+        learning by doing. I am looking for a job opportunity where I can both learn and make a real contribution — a role that
+        challenges me, helps me grow, and allows me to gain valuable experience while working on projects with real impact.
+        
     </p>
-
-
 </div>
+
+<div class="container">
+    <div class="experience-section">
+        <h2 class="section-title">Job experience</h2>
+        <div class="job-block">
+            <div class="job-title">Technician – Optical Internet - PEGO Slovakia, s.r.o.</div>
+            <div class="job-period">Jun 2023 – Aug 2023</div>
+            <ul class="job-details">
+                <li>Installation</li>
+                <li>configuration</li>
+                <li>maintenance of optical connections</li>
+            </ul>
+        </div>
+    
+        <div class="job-block">
+            <div class="job-title">Warehouse Worker - TECHMAT s.r.o.</div>
+            <div class="job-period">Jun 2024 – Aug 2024</div>
+            <ul class="job-details">
+                <li>inventory management</li>
+                <li>order picking</li>
+                <li>goods handling</li>
+            </ul>
+        </div>
+
+        <div class="job-block">
+            <div class="job-title">Various temporary jobs</div>
+            <div class="job-period">2018–2022</div>
+            <ul class="job-details">
+                <li>summer and part-time work in retail</li>
+                <li>manual labor, and customer service</li>
+            </ul>
+        </div>
+    </div>
+    <div class="skills-section">
+        <h2 class="section-title">Skills</h2>
+        <ul class="skills-list">
+            <li class="skill-item">
+                <span class="skill-name">Python</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 40%;"></div>
+                </div>
+            </li>
+            <li class="skill-item">
+                <span class="skill-name">C</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 40%;"></div>
+                </div>
+            </li>
+            <li class="skill-item">
+                <span class="skill-name">JavaScript</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 30%;"></div>
+                </div>
+            </li>
+            <li class="skill-item">
+                <span class="skill-name">HTML & CSS</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 70%;"></div>
+                </div>
+            </li>
+            <li class="skill-item">
+                <span class="skill-name">Flutter</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 30%;"></div>
+                </div>
+            </li>
+            <li class="skill-item">
+                <span class="skill-name">Github Actions</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 20%;"></div>
+                </div>
+            </li>
+            <li class="skill-item">
+                <span class="skill-name">AWS</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 20%;"></div>
+                </div>
+            </li>
+            <li class="skill-item">
+                <span class="skill-name">Terraform</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 20%;"></div>
+                </div>
+            </li>
+            <li class="skill-item">
+                <span class="skill-name">CCNA</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 60%;"></div>
+                </div>
+            </li>
+            <li class="skill-item">
+                <span class="skill-name">Linux</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 60%;"></div>
+                </div>
+            </li>
+            <li class="skill-item">
+                <span class="skill-name">SQL</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 30%;"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="accordion">
+        <button onclick="toggleAccordion(this)">AWS Cloud Resume Challenge</button>
+        <div class="panel">
+            <h1>Cloud Resume Challenge - AWS Implementation</h1>
+            
+            <div class="section">
+                <p>This project is my submission for the <strong>Cloud Resume Challenge</strong>, where the goal is to deploy a
+                    personal resume website on the cloud using <strong>AWS services</strong> and demonstrate basic cloud engineering
+                    skills.</p>
+            </div>
+            
+            <div class="section">
+                <h2>Project Overview</h2>
+                <p>The <strong>Cloud Resume Challenge</strong> is designed to showcase cloud skills by building a resume website
+                    hosted on the cloud. This project focuses on:</p>
+                <ul>
+                    <li>Hosting a static website with a resume.</li>
+                    <li>Using cloud-native services to handle storage, content delivery, and data analytics.</li>
+                    <li>Automating deployments with Infrastructure as Code (IaC) and CI/CD pipelines.</li>
+                    <li>Implementing a visitor counter to track website traffic.</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>Architecture</h2>
+                <p>The website is deployed using the following architecture:</p>
+                <ul>
+                    <li><strong>S3 Bucket</strong> – Hosts the static website content (HTML, CSS, JS).</li>
+                    <li><strong>CloudFront CDN</strong> – Distributes content globally with low latency.</li>
+                    <li><strong>Route 53</strong> – Provides a custom domain name and DNS management.</li>
+                    <li><strong>DynamoDB</strong> – Stores visitor count data.</li>
+                    <li><strong>Lambda Function</strong> – Updates the visitor counter in DynamoDB on each page visit.</li>
+                    <li><strong>IAM Roles & Policies</strong> – Ensures secure access for AWS resources.</li>
+                    <li><strong>CI/CD pipelines</strong> – Using GitHub Actions automatically deploys updates to the S3 bucket.</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>AWS Services Used</h2>
+                <ul>
+                    <li>Amazon S3 – Static website hosting</li>
+                    <li>Amazon CloudFront – Content Delivery Network (CDN)</li>
+                    <li>Amazon Route 53 – DNS management</li>
+                    <li>AWS Lambda – Serverless functions for visitor counter</li>
+                    <li>Amazon DynamoDB – NoSQL database for storing visitor data</li>
+                    <li>AWS IAM – Security and access management</li>
+                    <li>AWS Certificate Manager (ACM) – SSL/TLS certificate for HTTPS</li>
+                </ul>
+            </div>
+        </div>
+
+        <button onclick="toggleAccordion(this)">Project 2 – Preview</button>
+        <div class="panel">
+            <p>Other projects will be added soon</p>
+        </div>
+    </div>
+</section>
+
+<script>
+    function toggleAccordion(btn) {
+        let panel = btn.nextElementSibling;
+        panel.style.display = (panel.style.display === "block") ? "none" : "block";
+    }
+</script>
+
+
+
+
+
 
 <script src="index.js"></script>
 </body>
