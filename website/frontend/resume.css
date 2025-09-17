@@ -5,6 +5,28 @@
     padding: 0;
 }
 
+.container-all {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .social-icons {
+        right: 20px;
+        top: 10px;
+        padding: 6px 10px;
+    }
+
+    .main {
+        display: block;
+    }
+}
+
 
 body {
     font-family: 'Josefin Sans', sans-serif;
@@ -90,17 +112,23 @@ h1,h3,h2,h4 {
 }
 
 .social-icons {
-    position: fixed;
-    top: 15px;
-    right: 70px;
-    display: flex;
-    justify-content: center;
-    gap: 0.6rem;
+    
+  position: fixed;
+  top: 15px;
+  right: calc(50% - 640px + 20px);
+  display: flex;
+  gap: 0.6rem;
+}
+
+@media (max-width: 1280px) {
+    .social-icons {
+        right: 70px;
+    }
 }
 
 .social-icon img {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     object-fit: contain; 
     transition: transform 0.3s;
 }
@@ -127,7 +155,15 @@ h1,h3,h2,h4 {
     display: flex;
     width: 100%;
     margin-top: 50px;
+    box-sizing: border-box;
+    max-width: 1280px;
+    
    
+}
+.experience-section,
+.skills-section {
+    flex: 1;
+    min-width: 300px;
 }
 
 
@@ -187,7 +223,6 @@ h1,h3,h2,h4 {
     border-radius: 5px;
     height: 40px;
     margin-left: 20px;
-    
 }
 
 
@@ -213,6 +248,7 @@ h1,h3,h2,h4 {
     width: 0;
     transition: width 1.5s ease-in-out;
 }
+
 
 .section-title {
     color: #EEEEEE;
