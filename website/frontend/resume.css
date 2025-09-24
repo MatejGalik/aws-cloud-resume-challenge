@@ -11,21 +11,6 @@
     padding: 0 20px;
 }
 
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-
-    .social-icons {
-        right: 20px;
-        top: 10px;
-        padding: 6px 10px;
-    }
-
-    .main {
-        display: block;
-    }
-}
 
 
 body {
@@ -54,12 +39,12 @@ h1,h3,h2,h4 {
 .summary {
     padding-top: 20px;
     text-align: justify;
+}
 
-    p {
-        font-size: 1.4rem;
-        letter-spacing: .1rem;
-        margin: 0;
-    }
+.summary p {
+    font-size: 1.4rem;
+    letter-spacing: .1rem;
+    margin: 0;
 }
 
 .skills-ticker {
@@ -112,18 +97,11 @@ h1,h3,h2,h4 {
 }
 
 .social-icons {
-    
-  position: fixed;
-  top: 15px;
-  right: calc(50% - 640px + 20px);
-  display: flex;
-  gap: 0.6rem;
-}
-
-@media (max-width: 1280px) {
-    .social-icons {
-        right: 70px;
-    }
+    position: fixed;
+    top: 15px;
+    right: calc(50% - 640px + 20px);
+    display: flex;
+    gap: 0.6rem;
 }
 
 .social-icon img {
@@ -155,7 +133,6 @@ h1,h3,h2,h4 {
     display: flex;
     width: 100%;
     margin-top: 50px;
-    box-sizing: border-box;
     max-width: 1280px;
     
    
@@ -179,7 +156,6 @@ h1,h3,h2,h4 {
 
 .job-block {
     background-color: #393E46;
-    box-sizing: border-box;
     padding: 15px 20px;
     margin-bottom: 15px;
     margin-top: 20px;
@@ -204,49 +180,60 @@ h1,h3,h2,h4 {
 }
 .skills-list {
     list-style-type: none;
-    padding-left: 0;
+    padding-left: 15px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     gap: 15px;
-    
 }
 
 
 .skill-item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 15px;
     background-color: #393E46;
     border-left: 4px solid #00ADB5;
     color: #EEEEEE;
     padding: 10px 15px;
+
     border-radius: 5px;
     height: 40px;
-    margin-left: 20px;
+    margin-left: 0;
 }
-
-
 .skill-name {
     font-weight: bold;
     min-width: 120px;
     margin-right: 15px;
+    flex: 0 0 160px;
+    width: 160px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 
 .skill-bar {
     height: 12px;
-    flex-grow: 1;
+    flex: 1 1 auto;
     background-color: #2D3238;
     border-radius: 6px;
     overflow: hidden;
+    position: relative;
+    min-width: 0;
+    width: 100%; /* Ensure full width */
 }
 
 .skill-level {
     height: 100%;
     border-radius: 6px;
     background-color: #00ADB5;
-    width: 0;
-    transition: width 1.5s ease-in-out;
+    width: var(--p, 0%);
+    min-width: 6px;
+    max-width: 100%;
+    position: absolute; /* Position absolutely within skill-bar */
+    left: 0;
+    top: 0;
+    transition: width 0.3s ease;
 }
 
 
@@ -317,6 +304,121 @@ h1,h3,h2,h4 {
       padding: 10px;
       background: #1d2229;
   }
+
+  @media (max-width: 1024px) {
+    body {
+        padding: 60px 30px;
+        font-size: 15px;
+    }
+
+    .profile-pict {
+        width: 150px;
+    }
+
+    .skills-list {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .social-icons {
+        right: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 40px 18px;
+        font-size: 14px;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: stretch;
+    }
+
+    .experience-section,
+    .skills-section {
+        width: 100%;
+        padding-right: 0;
+        border-right: none;
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding-left: 0;
+    }
+
+    .skill-item {
+        height: auto;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 12px;
+        margin-left: 0;
+        gap: 4px;
+
+    }
+
+    .skill-name {
+        margin-bottom: 4px;
+        width: 100%;
+        flex: none;
+        min-width: 0; 
+    }
+
+    .skill-bar {
+        width: 100%;
+        position: relative;
+        margin-top: 2px;
+    }
+
+    .skill-level {
+        position: absolute;
+        left: 0;
+        width: var(--p, 0%);
+    }
+
+    .social-icons {
+        right: 18px;
+        top: 18px;
+    }
+
+    .resume_counter {
+        left: 18px;
+        right: auto;
+        top: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 28px 12px;
+        font-size: 13px;
+    }
+
+    h1,h2,h3,h4 {
+        margin-top: 12px;
+        margin-bottom: 18px;
+    }
+
+    .profile-pict {
+        width: 120px;
+    }
+
+    .social-icon img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .skills-ticker {
+        font-size: 13px;
+    }
+
+    .job-block {
+        padding: 12px;
+        margin-top: 12px;
+    }
+}
 
 
 
