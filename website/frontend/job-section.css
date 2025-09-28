@@ -1,0 +1,37 @@
+.experience-section {
+    width: 50%;
+    padding-right: 20px;
+    box-sizing: border-box;
+    border-right: 0.8px solid #ccc;
+    
+    
+}
+
+.job-block {
+    background-color: #393E46;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    border-left: 4px solid #00ADB5;
+    border-radius: 8px;
+}
+
+.job-title {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.job-period {
+    font-style: italic;
+    color: #EEEEEE;
+    margin-bottom: 10px;
+}
+
+.job-details {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.section-title {
+    color: #EEEEEE;
+}

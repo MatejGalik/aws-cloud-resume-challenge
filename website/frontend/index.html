@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matej Galik CV</title>
     <link rel="stylesheet" href="resume.css">
+    <link rel="stylesheet" href="skills-ticker.css">
+    <link rel="stylesheet" href="social-icons.css">
+    <link rel="stylesheet" href="job-section.css">
+    <link rel="stylesheet" href="skills-section.css">
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="projects-1_and_button.css">
+    <link rel="stylesheet" href="media-responsivity.css">
+    <link rel="stylesheet" href="profile-pict.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     
 </head>
@@ -17,17 +25,6 @@
         <button onclick="closePopup()">OK</button>
     </div>
 </div>
-
-<script>
-    
-    window.onload = function () {
-        document.getElementById("popup").classList.add("show");
-    }
-    function closePopup() {
-        document.getElementById("popup").classList.remove("show");
-    }
-</script>
-
 
 <div class="profile-center">
     <img class="profile-pict" src="images/profile-pict.png" alt="me :D">
@@ -262,19 +259,10 @@
     </div>
 </section>
 
-<script>
-    function toggleAccordion(btn) {
-        let panel = btn.nextElementSibling;
-        panel.style.display = (panel.style.display === "block") ? "none" : "block";
-    }
-</script>
-
-
-
-
-
-
 <script src="index.js"></script>
+<script src="popup.js"></script>
+<script src="projects-button.js"></script>
+
 
 </div>
 </body>

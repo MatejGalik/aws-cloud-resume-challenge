@@ -1,0 +1,114 @@
+ @media (max-width: 1024px) {
+    body {
+        padding: 60px 30px;
+        font-size: 15px;
+    }
+
+    .profile-pict {
+        width: 150px;
+    }
+
+    .skills-list {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .social-icons {
+        right: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 40px 18px;
+        font-size: 14px;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: stretch;
+    }
+
+    .experience-section,
+    .skills-section {
+        width: 100%;
+        padding-right: 0;
+        border-right: none;
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding-left: 0;
+    }
+
+    .skill-item {
+        height: auto;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 12px;
+        margin-left: 0;
+        gap: 4px;
+
+    }
+
+    .skill-name {
+        margin-bottom: 4px;
+        width: 100%;
+        flex: none;
+        min-width: 0; 
+    }
+
+    .skill-bar {
+        width: 100%;
+        position: relative;
+        margin-top: 2px;
+    }
+
+    .skill-level {
+        position: absolute;
+        left: 0;
+        width: var(--p, 0%);
+    }
+
+    .social-icons {
+        right: 18px;
+        top: 18px;
+    }
+
+    .resume_counter {
+        left: 18px;
+        right: auto;
+        top: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 28px 12px;
+        font-size: 13px;
+    }
+
+    h1,h2,h3,h4 {
+        margin-top: 12px;
+        margin-bottom: 18px;
+    }
+
+    .profile-pict {
+        width: 120px;
+    }
+
+    .social-icon img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .skills-ticker {
+        font-size: 13px;
+    }
+
+    .job-block {
+        padding: 12px;
+        margin-top: 12px;
+    }
+}

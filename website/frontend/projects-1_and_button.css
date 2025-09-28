@@ -1,0 +1,23 @@
+.section {
+    padding-left: 20px;
+  }
+
+.accordion button {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    background: #393E46;
+    cursor: pointer;
+  }
+
+.accordion button:hover {
+    background: #515357;
+  }
+
+.panel {
+    display: none;
+    padding: 10px;
+    background: #1d2229;
+  }
