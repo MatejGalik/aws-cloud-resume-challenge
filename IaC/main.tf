@@ -8,8 +8,6 @@ resource "aws_lambda_function" "myfunc" {
   role          = aws_iam_role.iam_for_lambda.arn
   handler       = "placeholder.handler"
   runtime       = "python3.11"
-
-  # Placeholder súbor (musíš si pripraviť prázdny ZIP)
   filename         = "${path.module}/lambda/placeholder.zip"
   source_code_hash = filebase64sha256("${path.module}/lambda/placeholder.zip")
 }
